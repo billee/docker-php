@@ -15,3 +15,6 @@ DockerFile
     docker compose up -d     - detach see what is going on
     docker compose ps
     docker exec -it docker-php-web-1 sh     
+
+    //after modifying codes, do this
+    docker compose up --build
