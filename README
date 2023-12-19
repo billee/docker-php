@@ -1,26 +1,25 @@
-Studied and followed below tutorial
+Studying and following below tutorial link
 
 https://www.youtube.com/watch?v=qv-P_rPFw4c
 by GaryClarke
 
 C:\Users\johnw\Sites\docker-php
 
-
 docker-compose.yaml
-    docker compose up
-        docker ps            - looking at container
-        docker image ls
-        docker compose ps    - looking at web service
+docker compose up
+docker ps - looking at container
+docker image ls
+docker compose ps - looking at web service
 
 DockerFile
-    look at hub.docker.com ( 8.1-fpm-alpine )
-    docker build -t billee:php81 -f php/Dockerfile .
-    docker compose up -d     - detach to come back to url
-    docker compose ps
-    docker exec -it docker-php-web-1 sh     
+look at hub.docker.com ( 8.1-fpm-alpine )
+docker build -t billee:php81 -f php/Dockerfile .
+docker compose up -d - detach to come back
+docker compose ps
+docker exec -it docker-php-web-1 sh
 
     //after modifying codes, do this
     docker compose up --build -d
 
     //to look at inside the container
-    docker exec -it docker-php-app-1 sh
+    docker exec -it docker-php-web-1 sh

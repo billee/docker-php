@@ -9,23 +9,24 @@ services:
   app:
     build:
       dockerfile: ./php/Dockerfile
-
     volumes:
-      - /var/www/html/vendor
-      - ./app:/var/www/html
+      - ./app:/app
 
-  db:
-    image: mysql:8.0
-    volumes:
-      - mysqldata:/var/lib/mysql
-    ports:
-      - "4306:3306"
-    restart: unless-stopped
-    environment:
-      MYSQL_ROOT_PASSWORD: secret
-      MYSQL_USER: user
-      MYSQL_PASSWORD: secret
-      MYSQL_DATABASE: docker-php
+  # volumes:
+  #   - /var/www/html/vendor
+  #   - ./app:/var/www/html
+#   db:
+#     image: mysql:8.0
+#     volumes:
+#       - mysqldata:/var/lib/mysql
+#     ports:
+#       - "4306:3306"
+#     restart: unless-stopped
+#     environment:
+#       MYSQL_ROOT_PASSWORD: secret
+#       MYSQL_USER: user
+#       MYSQL_PASSWORD: secret
+#       MYSQL_DATABASE: docker-php
 
-volumes:
-  mysqldata:
+# volumes:
+#   mysqldata:
